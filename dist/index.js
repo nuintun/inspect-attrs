@@ -130,36 +130,31 @@ function inspectAttrs(source, rules) {
 
   // Visit rules
   Object.keys(rules).forEach(key => {
-    if (typpy(key, String)) {
-      let current = source;
-      const attrs = key.split('.');
+    let current = source;
+    const attrs = key.split('.');
 
-      // Visit attrs
-      return attrs.reduce((attrs, key) => {
-        // Add key
-        attrs.push(key);
+    // Visit attrs
+    return attrs.reduce((attrs, key) => {
+      // Add key
+      attrs.push(key);
 
-        // Get keys
-        const keys = attrs.join('.');
+      // Get keys
+      const keys = attrs.join('.');
 
-        // Hit cache
-        if (!visited.has(keys)) {
-          // Add cache
-          visited.add(keys);
-          // Match rules
-          matchRules(current, key, rules, keys);
-        }
+      // Hit cache
+      if (!visited.has(keys)) {
+        // Add cache
+        visited.add(keys);
+        // Match rules
+        matchRules(current, key, rules, keys);
+      }
 
-        // Move current cursor
-        current = current[key];
+      // Move current cursor
+      current = current[key];
 
-        // Return attrs
-        return attrs;
-      }, []);
-    }
-
-    // Rule key not a string
-    matchRules(source, key, rules, key);
+      // Return attrs
+      return attrs;
+    }, []);
   });
 
   return source;

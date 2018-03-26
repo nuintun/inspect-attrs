@@ -7,13 +7,32 @@
 const expect = require('chai').expect;
 const inspectAttrs = require('../dist/index');
 
+const typpy = inspectAttrs.typpy;
+
 describe('inspect attrs', () => {
   it('should export typpy', () => {
-    expect(inspectAttrs.typpy).to.be.a('function');
+    expect(typpy).to.be.a('function');
+
+    typpy(NaN);
+    typpy(NaN, NaN);
+    typpy(NaN, 'nan');
+    typpy(null);
+    typpy(null, null);
+    typpy(null, 'null');
+    typpy(undefined);
+    typpy(undefined, undefined);
+    typpy(undefined, 'undefined');
   });
 
   it('should export typpy.typeof', () => {
-    expect(inspectAttrs.typpy.typeof).to.be.a('function');
+    expect(typpy.typeof).to.be.a('function');
+
+    typpy.typeof(NaN);
+    typpy.typeof(NaN, true);
+    typpy.typeof(null);
+    typpy.typeof(null, true);
+    typpy.typeof(undefined);
+    typpy.typeof(undefined, true);
   });
 
   it('should custom type error message', () => {
@@ -37,7 +56,10 @@ describe('inspect attrs', () => {
   it('should passed on type invalid and have default value', () => {
     const object = inspectAttrs(
       { key: () => 'key', sub: { key: () => 'key' } },
-      { key: { type: String, default: 'key' }, 'sub.key': { type: [String], default: 'key' } }
+      {
+        key: { type: String, default: 'key' },
+        'sub.key': { type: [String], default: 'key' }
+      }
     );
 
     expect(object).to.be.eql({ key: 'key', sub: { key: 'key' } });
