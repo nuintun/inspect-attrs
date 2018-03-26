@@ -36,4 +36,8 @@ logs
 package-lock.json
 
 # rollup configure
-rollup.js
+/rollup.js
+
+# source file
+/lib
+/index.js
