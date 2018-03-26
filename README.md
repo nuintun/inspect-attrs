@@ -4,6 +4,7 @@
 >
 > [![NPM Version][npm-image]][npm-url]
 > [![Download Status][download-image]][npm-url]
+> [![Linux Status][travis-image]][travis-url]
 > [![Windows Status][appveyor-image]][appveyor-url]
 > [![Test Coverage][coveralls-image]][coveralls-url]
 > ![Node Version][node-image]
@@ -40,6 +41,8 @@ options = inspectAttrs(options, {
 });
 ```
 
+[travis-image]: http://img.shields.io/travis/nuintun/inspect-attrs.svg?style=flat-square&label=linux
+[travis-url]: https://travis-ci.org/nuintun/inspect-attrs
 [npm-image]: https://img.shields.io/npm/v/inspect-attrs.svg?style=flat-square
 [npm-url]: https://www.npmjs.org/package/inspect-attrs
 [download-image]: https://img.shields.io/npm/dm/inspect-attrs.svg?style=flat-square
