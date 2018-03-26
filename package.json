@@ -2,7 +2,7 @@
   "name": "inspect-attrs",
   "version": "0.0.1",
   "description": "An object attributes inspect tool.",
-  "main": "dist/index.js",
+  "main": "dist/index",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nuintun/inspect-attrs.git"
