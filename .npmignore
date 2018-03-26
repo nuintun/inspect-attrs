@@ -35,6 +35,6 @@ logs
 # npm lock file
 package-lock.json
 
-# src file and dist dev file
+# src file
 lib
 index.js
