@@ -1,6 +1,6 @@
 {
   "name": "inspect-attrs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An object attributes inspect tool.",
   "main": "dist/index",
   "repository": {
