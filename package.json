@@ -1,19 +1,13 @@
 {
   "name": "inspect-attrs",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "An object attributes inspect tool.",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nuintun/inspect-attrs.git"
   },
-  "keywords": [
-    "inspect",
-    "inspector",
-    "attrs",
-    "attributes",
-    "propertys"
-  ],
+  "keywords": ["inspect", "inspector", "attrs", "attributes", "propertys"],
   "author": {
     "name": "nuintun",
     "email": "nuintun@qq.com"
@@ -33,7 +27,8 @@
   "homepage": "https://github.com/nuintun/inspect-attrs#readme",
   "scripts": {
     "test": "mocha --timeout 6000 --check-leaks --reporter spec --bail --exit",
-    "test-ci": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --timeout 6000 --check-leaks --reporter spec --exit",
+    "test-ci":
+      "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --timeout 6000 --check-leaks --reporter spec --exit",
     "test-cov": "istanbul cover ./node_modules/mocha/bin/_mocha -- --timeout 6000 --check-leaks --reporter dot --exit"
   }
 }
