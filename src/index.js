@@ -8,7 +8,7 @@ import typpy from './lib/typpy';
 
 /**
  * @function formatMessage
- * @param {any} message
+ * @param {string} message
  * @param {string} keys
  * @returns {string|null}
  */
@@ -72,6 +72,8 @@ function matchRules(source, sourceKey, rules, ruleKey) {
  * @param {string|Array} rules.type
  * @param {boolean} rules.required
  * @param {any} rules.default
+ * @param {string} rules.onRequired
+ * @param {string} rules.onTypeError
  * @returns {Object}
  */
 export default function inspectAttrs(source, rules) {

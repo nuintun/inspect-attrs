@@ -2,7 +2,7 @@
  * @module inspect-attrs
  * @author nuintun
  * @license MIT
- * @version 0.4.1
+ * @version 0.4.2
  * @description An object attributes inspect tool.
  * @see https://github.com/nuintun/inspect-attrs#readme
  */
@@ -61,7 +61,7 @@ typpy.typeof = function(input, ctor) {
 
 /**
  * @function formatMessage
- * @param {any} message
+ * @param {string} message
  * @param {string} keys
  * @returns {string|null}
  */
@@ -125,6 +125,8 @@ function matchRules(source, sourceKey, rules, ruleKey) {
  * @param {string|Array} rules.type
  * @param {boolean} rules.required
  * @param {any} rules.default
+ * @param {string} rules.onRequired
+ * @param {string} rules.onTypeError
  * @returns {Object}
  */
 function inspectAttrs(source, rules) {
