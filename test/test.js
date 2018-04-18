@@ -5,7 +5,7 @@
  */
 
 const expect = require('chai').expect;
-const inspectAttrs = require('../dist/index');
+const inspectAttrs = require('../index');
 
 const typpy = inspectAttrs.typpy;
 
