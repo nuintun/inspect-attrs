@@ -2,7 +2,7 @@
  * @module inspect-attrs
  * @author nuintun
  * @license MIT
- * @version 0.5.3
+ * @version 0.6.0
  * @description An object attributes inspect tool.
  * @see https://github.com/nuintun/inspect-attrs#readme
  */
